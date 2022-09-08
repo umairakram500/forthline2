@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="app_background">@android:color/white</color>
+
+    <color name="colorPrimary">#00295C</color>
+    <color name="colorPrimaryDark">#002964</color>
+    <color name="colorAccent">#00E062</color>
+    <color name="colorError">#FF5722</color>
+
+    <color name="light">#f7f7f7</color>
+
+    <color name="scanner_background">#B3333333</color>
+    <color name="document_scanner_result_background">@color/light</color>
+</resources>

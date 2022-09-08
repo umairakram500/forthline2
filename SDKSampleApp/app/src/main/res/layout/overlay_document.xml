@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.DocumentActivity"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <com.fourthline.sdksample.PunchholeView
+        android:id="@+id/punchhole"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/scanner_background"
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="-16dp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/documentMask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/document_mask_passport_front"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/titleLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintLeft_toLeftOf="@+id/documentMask"
+        app:layout_constraintRight_toRightOf="@+id/documentMask"
+        app:layout_constraintBottom_toTopOf="@id/documentMask"
+        tools:text="Title Label" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/stepLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@+id/documentMask"
+        app:layout_constraintRight_toRightOf="@+id/documentMask"
+        app:layout_constraintTop_toBottomOf="@+id/documentMask"
+        tools:text="Step Label" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/warningsLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:textColor="#FFA000"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@+id/documentMask"
+        app:layout_constraintRight_toRightOf="@+id/documentMask"
+        app:layout_constraintTop_toBottomOf="@+id/stepLabel"
+        tools:text="Warnings Label" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonSnapshot"
+        style="@style/Base.Widget.AppCompat.Button.Borderless.Green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="32dp"
+        android:text="@string/document_scanner_status_manual_mode_trigger"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/scanPreviewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:padding="32dp"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/scanPreview"
+            android:layout_width="0dp"
+            android:layout_height="240dp"
+            android:background="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/scanPreviewLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/scanPreview"
+            app:layout_constraintLeft_toLeftOf="@+id/scanPreview"
+            app:layout_constraintRight_toRightOf="@+id/scanPreview"
+            tools:text="Preview Label" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/buttonRetake"
+            style="@style/Base.Widget.AppCompat.Button.Borderless.Blue"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginTop="32dp"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            android:text="@string/common_retake"
+            app:layout_constraintLeft_toLeftOf="@+id/scanPreview"
+            app:layout_constraintTop_toBottomOf="@+id/scanPreview" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/buttonConfirm"
+            style="@style/Base.Widget.AppCompat.Button.Borderless.Blue"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginTop="32dp"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            android:text="@string/common_confirm"
+            app:layout_constraintRight_toRightOf="@+id/scanPreview"
+            app:layout_constraintTop_toBottomOf="@+id/scanPreview" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/buttonClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="32dp"
+        android:text="@string/common_close"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</merge>

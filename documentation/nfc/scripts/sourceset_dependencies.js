@@ -1,0 +1,1 @@
+sourceset_dependencies='{":fourthline-nfc:dokkaHtml/androidTestRelease":[],":fourthline-nfc:dokkaHtml/debug":[],":fourthline-nfc:dokkaHtml/main":[],":fourthline-nfc:dokkaHtml/release":[],":fourthline-nfc:dokkaHtml/testFixtures":[],":fourthline-nfc:dokkaHtml/testFixturesDebug":[],":fourthline-nfc:dokkaHtml/testFixturesRelease":[]}'

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fourthline.sdksample">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".FourthlineSdkSampleApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activities.SelfieActivity" android:exported="false"/>
+        <activity android:name=".SelfieResultActivity" android:exported="false"/>
+
+        <activity android:name=".activities.DocumentActivity" android:exported="false"/>
+        <activity android:name=".DocumentResultActivity" android:exported="false"/>
+
+        <activity android:name=".activities.NfcActivity" android:exported="false"/>
+        <activity android:name=".NfcResultActivity" android:exported="false"/>
+
+        <activity android:name=".activities.SubmitKycActivity" android:exported="false"/>
+
+        <activity android:name=".OrcaSampleActivity" android:exported="false" />
+    </application>
+</manifest>

@@ -1,0 +1,1 @@
+sourceset_dependencies='{":fourthline-sdk:dokkaHtml/androidTestRelease":[],":fourthline-sdk:dokkaHtml/debug":[],":fourthline-sdk:dokkaHtml/main":[],":fourthline-sdk:dokkaHtml/release":[],":fourthline-sdk:dokkaHtml/testFixtures":[],":fourthline-sdk:dokkaHtml/testFixturesDebug":[],":fourthline-sdk:dokkaHtml/testFixturesRelease":[]}'
